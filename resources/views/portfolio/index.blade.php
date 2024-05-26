@@ -199,103 +199,31 @@
       </div>
     </section><!-- End Portfolio Section -->
         
-  <!-- ======= Services Section ======= -->
-  <section id="services" class="services">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Services</h2>
-        <p>My Services</p>
-      </div>
-
-      @foreach ($services as $service)
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-          <div class="icon-box">
-            <h4><a href="">{{ $service->title }}</a></h4>
-            <p>{{ $service->description }}</p>
-          </div>
-        </div>
-      @endforeach
-      </div>
-
-    </div>
-  </section><!-- End Services Section -->
-
-    
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
 
         <div class="section-title">
-            <h2>Contact</h2>
-            <p>Contact Me</p>
+          <h2>Services</h2>
+          <p>My Services</p>
         </div>
 
-        <div class="row mt-2">
-
-            <div class="col-md-6 d-flex align-items-stretch">
-            <div class="info-box">
-                <i class="bx bx-map"></i>
-                <h3>My Address</h3>
-                <p>{{ $aboutme->address }}</p>
+        @foreach ($services as $service)
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <h4><a href="">{{ $service->title }}</a></h4>
+              <p>{{ $service->description }}</p>
             </div>
-            </div>
-
-            <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-            <div class="info-box">
-                <i class="bx bx-share-alt"></i>
-                <h3>Social Profiles</h3>
-                <div class="social-links">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-            </div>
-
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
-            <div class="info-box">
-                <i class="bx bx-envelope"></i>
-                <h3>Email Me</h3>
-                <p>{{ $aboutme->email }}</p>
-            </div>
-            </div>
-            <div class="col-md-6 mt-4 d-flex align-items-stretch">
-            <div class="info-box">
-                <i class="bx bx-phone-call"></i>
-                <h3>Call Me</h3>
-                <p>{{ $aboutme->phone }}</p>
-            </div>
-            </div>
+          </div>
+        @endforeach
         </div>
 
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-            <div class="row">
-            <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-            </div>
-            </div>
-            <div class="form-group mt-3">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-            </div>
-            <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
+      </div>
+    </section><!-- End Services Section -->
 
-        </div>
-    </section><!-- End Contact Section -->>
+    <section id="contact" class="contact">
+      @livewire('contact-form')
+    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
